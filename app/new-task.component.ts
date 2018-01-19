@@ -25,8 +25,9 @@ import { Task } from './task.model';
 export class NewTaskComponent {
   @Output() newTaskSender = new EventEmitter();
 
-  submitForm(description: string, priority: number) {
-    const newTaskToAdd: Task = new Task(description, priority);
+  submitForm(description: string, priority: string) {
+    const newTaskToAdd: Task = new Task(description, parseInt(priority));
+    console.log(newTaskToAdd);
     this.newTaskSender.emit(newTaskToAdd);
   }
 }

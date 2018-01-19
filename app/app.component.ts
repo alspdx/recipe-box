@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Task } from './task.model';
 
+// I am the Grand Poobah into our main HTML DOM
 @Component({
   selector: 'app-root',
   template: `
@@ -30,6 +31,7 @@ export class AppComponent {
   ];
 
   editTask(clickedTask) {
+    console.log(this.masterTaskList);
     this.selectedTask = clickedTask;
   }
 
